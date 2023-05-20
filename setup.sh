@@ -13,6 +13,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 mv .zshrc.bak .zshrc
 
 echo "Done!"
+echo "Install Neofetch please!"
 
 rm ./setup.sh
 rm README.md
