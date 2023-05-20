@@ -2,8 +2,8 @@
 
 #check if dir is ~
 if [ "$PWD" != "$HOME" ]; then
-    mv .* ~
-    mv * ~
+    cp -R ./.* ~ --backup=existing
+    cp -R ./* ~ --backup=existing
     cd ~
 fi
 
@@ -12,7 +12,10 @@ mv .zshrc .zshrc.bak
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv .zshrc.bak .zshrc
 
+chsh -s "$(which zsh)"
+
 echo "Done!"
+
 echo "Install Neofetch please!"
 
 rm ./setup.sh
