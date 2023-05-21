@@ -2,9 +2,9 @@
 
 #check if dir is ~
 if [ "$PWD" != "$HOME" ]; then
-    cp -R ./.* ~ --backup=existing
-    cp -R ./* ~ --backup=existing
-    cd ~
+    cp -R ./.* "$HOME" --backup=existing
+    cp -R ./* "$HOME" --backup=existing
+    cd "$HOME"
 fi
 
 echo "Installing Oh My Zsh..."
