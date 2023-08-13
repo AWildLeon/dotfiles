@@ -10,12 +10,12 @@ else
     chsh -s $(which zsh)
 fi
 
-cat > .aliases << EOF
+cat >  ~/.aliases << EOF
 alias ls="ls -la --color=auto"
 alias wget='wget --hsts-file="~/.cache/wget-hsts"'
 EOF
 
-curl https://raw.githubusercontent.com/AWildLeon/dotfiles/main/.zshrc > .zshrc
+curl https://raw.githubusercontent.com/AWildLeon/dotfiles/main/.zshrc > ~/.zshrc
 
 }
 main
